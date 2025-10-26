@@ -1,0 +1,11 @@
+torchrun --nproc_per_node=2 train.py \
+  --dataset DGM4 \
+  --epochs 8 \
+  --batch-size 4 \
+  --lr 5e-5 \
+  --lr-scheduler cosine \
+  --warmup-ratio 0.1 \
+  --lr-scale 1.5 \
+  --regular-weight 0.05 \
+  --train-json /home/aorus/He/qwen-vl-finetune/SAMM_data/SAMM-with-CAP/train1.json \
+  --val-json /home/aorus/He/qwen-vl-finetune/SAMM_data/SAMM-with-CAP/val.json
